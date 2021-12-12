@@ -60,7 +60,7 @@ local data =
                 }
                 {
                     ["name"] = "Beans/Jars:",
-                    ["value"] = game:GetService("Players").LocalPlayer.PlayerGui.HUD.Bottom.Senzu.Am.Text,
+                    ["value"] = game:GetService("Players").LocalPlayer.PlayerGui.HUD.Bottom.Senzu.Am.Text.Value,
                     ["inline"] = true
                 }
             },
