@@ -1,0 +1,100 @@
+local lib = loadstring(game:HttpGet("https://pastebin.com/raw/9m51VUEE", true))()
+lib.SetName("Heaven GUI")
+lib:CreateButton("Rejoin", function() game:GetService("TeleportService"):Teleport(game.PlaceId, LocalPlayer) end)
+lib:CreateToggle("NoSlow", function(noslow) 
+    if noslow == true then
+            Slow = game:GetService("RunService").Stepped:Connect(function()
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Action") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("Action"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Attacking") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("Attacking"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Using") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("Using"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("hyper") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("hyper"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Hyper") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("Hyper"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("heavy") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("heavy"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("KiBlasted") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("KiBlasted"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Tele") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("Tele"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("tele") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("tele"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Killed") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("Killed"):Destroy()
+                    end
+                    if game.Players.LocalPlayer.Character:FindFirstChild("Slow") then
+                        game.Players.LocalPlayer.Character:FindFirstChild("Slow"):Destroy()
+                    end
+                end
+            )
+        else
+            Slow:Disconnect()
+        end
+end)
+lib:CreateButton("2x Freeze", function() 
+function Vandell()
+     Plr = game:GetService('Players').LocalPlayer
+  game.Workspace.Live[Plr.Name].True:destroy()  
+end Vandell()
+end)
+lib:CreateButton("Fusion Stack", function() 
+game.Players.LocalPlayer.Character.FUSED:Destroy()
+end)
+lib:CreateButton("AntiAFK", function() 
+	local VirtualUser=game:service'VirtualUser'
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+		VirtualUser:CaptureController()
+		VirtualUser:ClickButton2(Vector2.new())
+	end)
+end)
+lib:CreateToggle("Shield Remove", function(shield) 
+while shield do 
+		for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v.Name == "ForceField" then
+				v:Destroy()
+			end
+		end
+	end
+end)
+lib:CreateToggle("Stay in Form", function(StayinForm)
+if StayinForm == true then
+            if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("SaiyanAuraWeak") then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.SaiyanAuraWeak:Destroy()
+            end
+
+            if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("MajinParticle") then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.MajinParticle:Destroy()
+            end
+
+            if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Lightning2") then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.Lightning2:Destroy()
+            end
+
+            if game.Players.LocalPlayer.Character:FindFirstChild("SaiyanHair") then
+                game.Players.LocalPlayer.Character.SaiyanHair:Destroy()
+            end
+
+            if game.Players.LocalPlayer.Character.Head:FindFirstChild("Tatoo") then
+                game.Players.LocalPlayer.Character.Head.Tatoo:Destroy()
+            end
+
+            if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("MajinAura") then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.MajinAura:Destroy()
+            end
+
+        else
+            game.Players.LocalPlayer.Character.Humanoid.Health = 0
+        end
+end)
